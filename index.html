@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About You Chiropractic | Chiropractor in Matawan, NJ</title>
+  <meta name="description" content="Warm, personalized chiropractic care for infants, children, pregnant women, athletes, adults, and older adults in Matawan, NJ." />
+  <link rel="canonical" href="https://aboutyouchiro.com/" />
+  <meta property="og:title" content="About You Chiropractic | Matawan, NJ" />
+  <meta property="og:description" content="Helping Matawan families function at their best since 1984." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="assets/icons/about-you-chiropractic-favicon.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+    :root{
+      --blue:#1746A2; --blue-deep:#0B2F72; --blue-soft:#EAF1FF;
+      --gold:#FFC83D; --gold-deep:#E5A900; --ink:#172033; --gray:#667085;
+      --cream:#FFF9EE; --white:#fff; --line:#DDE4EF;
+      --shadow:0 18px 50px rgba(11,47,114,.14);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);font:16px/1.55 "DM Sans",sans-serif;background:white}
+    a{text-decoration:none;color:inherit}
+    .topline{background:var(--blue-deep);color:#fff;text-align:center;padding:9px 18px;font-weight:600;font-size:13px;letter-spacing:.2px}
+    .topline span{color:var(--gold)}
+    header{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;background:rgba(255,255,255,.96);border-bottom:1px solid #edf0f5;position:sticky;top:0;z-index:20}
+    .brand{display:flex;align-items:center;width:300px;min-width:0;flex:0 1 auto}
+    .brand img{display:block;width:auto;max-width:100%;height:62px;max-height:62px;object-fit:contain;object-position:left center}
+    .mark{width:38px;height:38px;border-radius:50% 50% 48% 52%;background:var(--blue);position:relative;box-shadow:inset 0 0 0 8px #d8e5ff}
+    .mark:after{content:"";position:absolute;width:12px;height:20px;border-radius:10px;background:white;left:13px;top:9px;transform:rotate(28deg)}
+    nav{display:flex;align-items:center;gap:20px;color:#39445a;font-weight:600;font-size:13px}
+    .mobile-menu{display:none}
+    .nav-cta,.btn{background:var(--gold);color:var(--blue-deep);font-weight:800;border-radius:12px;padding:14px 23px;box-shadow:0 8px 0 rgba(229,169,0,.25);display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.18s ease}
+    .nav-cta:hover,.btn:hover{transform:translateY(-2px);background:#ffd45c;box-shadow:0 10px 0 rgba(229,169,0,.22)}
+    .hero{min-height:560px;background:linear-gradient(116deg,var(--cream) 0 49%,var(--blue-soft) 49% 100%);display:grid;grid-template-columns:1.02fr .98fr;align-items:center;padding:56px 7vw 70px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:#fff4d2;left:-90px;top:-90px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-weight:800;font-size:13px;letter-spacing:1.1px;text-transform:uppercase}
+    .eyebrow:before{content:"";width:28px;height:3px;border-radius:3px;background:var(--gold)}
+    h1{font:700 clamp(42px,4vw,68px)/1.02 "Plus Jakarta Sans",sans-serif;letter-spacing:-2.4px;margin:17px 0 20px;color:var(--blue-deep);max-width:720px}
+    h1 em{color:var(--blue);font-style:normal;position:relative}
+    .lead{font-size:19px;color:#4b566c;max-width:620px;margin-bottom:26px}
+    .hero-actions{display:flex;gap:17px;align-items:center;flex-wrap:wrap}
+    .hero .btn{font-size:17px;padding:17px 27px}
+    .phone{color:var(--blue-deep);font-weight:700;font-size:14px}
+    .reassure{display:flex;gap:20px;margin-top:24px;font-size:13px;color:#596579;font-weight:600;flex-wrap:wrap}
+    .reassure span:before{content:"✓";color:var(--blue);font-weight:900;margin-right:7px}
+    .family-art{position:relative;height:440px;margin-left:7%;overflow:hidden}
+    .family-art img{width:100%;height:100%;object-fit:cover;object-position:center 43%;border-radius:inherit}
+    .arch{position:absolute;inset:0 4% 0 7%;border-radius:180px 180px 35px 35px;background:linear-gradient(155deg,#7ea7f6,var(--blue));box-shadow:var(--shadow);overflow:hidden}
+    .sun{position:absolute;width:100px;height:100px;border-radius:50%;background:#ffe89c;right:42px;top:42px}
+    .adult,.child,.baby{position:absolute;background:#f3c8aa;border-radius:50%}
+    .adult{width:118px;height:118px;left:30%;top:75px;box-shadow:0 40px 0 34px #f7dfc7}
+    .adult:before{content:"";position:absolute;inset:-8px -4px 45px -10px;border-radius:60px 60px 25px 25px;background:#6b4736}
+    .adult:after{content:"";position:absolute;width:200px;height:170px;background:#fff;left:-42px;top:133px;border-radius:80px 80px 10px 10px}
+    .child{width:80px;height:80px;right:16%;top:184px;z-index:3;box-shadow:0 30px 0 22px #f5ae7a}
+    .child:before{content:"";position:absolute;inset:-6px -2px 45px -4px;background:#8a5c3f;border-radius:45px 45px 15px 15px}
+    .baby{width:62px;height:62px;left:25%;bottom:88px;z-index:4;box-shadow:0 21px 0 17px #d7e6ff}
+    .heart{position:absolute;right:-8px;bottom:54px;background:white;border-radius:18px;padding:15px 18px;color:var(--blue-deep);font-weight:800;font-size:13px;box-shadow:var(--shadow);z-index:5}
+    .heart strong{color:#e05260;font-size:20px;margin-right:7px}
+    .offer{max-width:1180px;margin:-42px auto 0;position:relative;z-index:8;background:white;border-radius:22px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:34px;padding:24px 30px;border:1px solid #edf1f8}
+    .offer-tag{color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px}
+    .offer-copy strong{font:700 24px/1.2 "Plus Jakarta Sans",sans-serif;color:var(--blue-deep)}
+    .price{display:flex;align-items:end;gap:9px;border-left:1px solid var(--line);padding-left:32px}
+    .price b{font:700 52px/1 "Plus Jakarta Sans",sans-serif;color:var(--blue)}
+    .price span{color:#7a8495;font-size:13px}.price del{display:block}
+    .offer .btn{white-space:nowrap}
+    .proof-early{display:flex;align-items:center;justify-content:center;gap:26px;padding:22px 7vw;border-bottom:1px solid var(--line);background:white;color:var(--blue-deep)}
+    .proof-early b{font-size:17px}.proof-early span{color:#b17f00;letter-spacing:3px}.proof-early small{color:var(--gray)}
+    .trust{padding:58px 7vw 48px;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;max-width:1420px;margin:auto}
+    .trust-item{padding:20px;border-left:3px solid #d7e4ff}
+    .trust-item b{font:700 26px/1.2 "Plus Jakarta Sans",sans-serif;color:var(--blue-deep);display:block;margin-bottom:4px}
+    .trust-item span{font-size:13px;color:var(--gray)}
+    .mission-preview{padding:60px 8vw;background:var(--cream);text-align:center}.mission-preview p{max-width:1030px;margin:auto;font:700 36px/1.2 "Plus Jakarta Sans",sans-serif;color:var(--blue-deep)}
+    .story{background:#f7f9fc;padding:66px 7vw;display:grid;grid-template-columns:.82fr 1.18fr;gap:74px;align-items:center}
+    .doctor{height:360px;background:var(--blue-soft);border-radius:28px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .doctor>img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+    .doctor>img.doctor-photo-team-wide{object-position:center 44%}
+    .doctor .head{position:absolute;width:120px;height:132px;border-radius:60px 60px 54px 54px;background:#efc3a3;left:50%;top:48px;transform:translateX(-50%);box-shadow:0 -19px 0 -3px #4c3d37}
+    .doctor .coat{position:absolute;width:250px;height:235px;border-radius:90px 90px 0 0;background:#fff;left:50%;bottom:-25px;transform:translateX(-50%)}
+    .doctor .shirt{position:absolute;width:72px;height:170px;background:var(--blue);left:50%;bottom:-5px;transform:translateX(-50%);clip-path:polygon(0 0,100% 0,76% 100%,24% 100%)}
+    .doctor-label{position:absolute;left:18px;bottom:18px;background:white;padding:12px 16px;border-radius:12px;font-weight:800;color:var(--blue-deep);box-shadow:0 10px 25px rgba(11,47,114,.12)}
+    h2{font:700 40px/1.08 "Plus Jakarta Sans",sans-serif;letter-spacing:-1.3px;color:var(--blue-deep);margin:11px 0 18px}
+    .story p{color:#596579;max-width:660px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+    .step{background:white;border:1px solid var(--line);padding:18px;border-radius:16px;font-size:13px;color:#657085}
+    .step b{display:block;color:var(--blue-deep);font-size:15px;margin:8px 0 4px}
+    .num{width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:var(--gold);font-weight:900;color:var(--blue-deep)}
+    #doctor .steps{display:none}
+    .life-stages-preview{padding:58px 7vw;background:var(--cream)}.life-stage-copy{max-width:860px;color:#596579}.life-cards{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:27px}.life-card{display:grid;place-items:center;align-content:center;gap:9px;min-height:120px;padding:15px;border:1px solid #e6dfce;border-radius:15px;background:rgba(255,255,255,.82);color:var(--blue-deep);font-weight:800}.life-card img{display:block;width:34px;height:34px;object-fit:contain}
+    .choose-preview{padding:58px 7vw;background:white}.choose-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.choose-card{padding:19px;border:1px solid var(--line);border-radius:14px;color:var(--blue-deep);font-weight:800}.choose-card span{display:block;color:#0b2f72;background:var(--gold);width:27px;height:27px;border-radius:50%;text-align:center;line-height:27px;margin-bottom:10px}
+    .choose-card small{display:block;margin-top:7px;color:var(--gray);font-weight:400;line-height:1.45}
+    .technique-teaser{padding:58px 7vw;background:var(--blue-soft)}.technique-teaser>div{max-width:1080px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:40px}.technique-teaser p{max-width:760px;color:#596579}.technique-teaser a{color:var(--blue);font-weight:800;white-space:nowrap}
+    .visit-preview{padding:66px 7vw;background:white}.visit-days{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}.visit-day{padding:26px;border:1px solid var(--line);border-radius:18px;background:#f8faff}.visit-day strong{display:block;font:700 25px/1.2 "Plus Jakarta Sans",sans-serif;color:var(--blue-deep);margin-bottom:14px}.visit-day ul{display:grid;gap:8px;padding-left:20px;color:#596579;font-size:14px}
+    .team-section{padding:48px 7vw}.reviews-section{padding:66px 7vw}
+    .team-section{background:var(--blue-soft)}
+    .section-copy{max-width:760px;margin-bottom:30px;color:#596579}
+    .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .team-card{display:grid;grid-template-columns:84px 1fr;align-items:center;gap:18px;background:white;padding:18px;border-radius:15px;box-shadow:0 8px 24px rgba(11,47,114,.07)}
+    .team-photo{width:84px;height:102px;display:grid;place-items:center;border-radius:50% 50% 14px 14px;background:linear-gradient(145deg,#dce6ff,#aac3f4);font:700 28px/1 "Plus Jakarta Sans",sans-serif;color:var(--blue-deep);overflow:hidden}
+    .team-photo img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+    .team-card b{display:block;font:700 22px/1.2 "Plus Jakarta Sans",sans-serif;color:var(--blue-deep);margin-bottom:8px}
+    .team-card p{font-size:12px;line-height:1.5;color:#657085;margin:0}
+    .reviews-section{background:white}
+    .widget-slot{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:260px;gap:20px;padding:24px 28px;overflow:visible;border:2px dashed #b8c8e7;border-radius:18px;background:#f8faff}
+    .widget-slot strong{display:block;color:var(--blue-deep);font-size:18px}.widget-slot span{color:#b17f00;letter-spacing:3px;font-size:20px}.widget-slot small{color:#657085}
+    .faq-preview,.office-preview{padding:66px 7vw}.faq-preview{background:var(--cream)}.faq-preview details{border-top:1px solid #ddd7c8}.faq-preview details:last-child{border-bottom:1px solid #ddd7c8}.faq-preview summary{padding:19px 42px 19px 0;color:var(--blue-deep);font-weight:800;cursor:pointer}.faq-preview details p{max-width:820px;margin:0 0 20px;color:#596579;font-size:14px}.office-preview{background:white}.office-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.office-card{position:relative;height:220px;border-radius:18px;overflow:hidden;background:#eef3fa;display:flex;align-items:flex-end;padding:18px;color:var(--blue-deep);font-weight:900}.office-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.office-card>b{position:relative;z-index:1;padding:9px 12px;border-radius:9px;background:rgba(255,255,255,.94)}.office-building{grid-column:1/-1;height:360px;padding:0;background:white}.office-building img{width:100%;height:100%;object-fit:cover;object-position:center}.office-building b{position:absolute;left:16px;bottom:16px;padding:10px 13px;border-radius:9px;background:rgba(255,255,255,.93)}
+    .final-preview{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:58px 7vw;background:var(--blue);color:white}.final-preview h2{color:white;max-width:760px}.final-preview p{max-width:760px;color:#dce6ff}
+    .site-footer{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:34px;padding:52px 7vw 90px;background:var(--blue-deep);color:#dbe5f9}.site-footer strong{display:block;color:white;margin-bottom:11px}.site-footer a,.site-footer span{display:block;margin:7px 0;font-size:13px}.site-footer a:hover{color:var(--gold)}.site-footer img{display:block;width:250px;max-width:100%;height:auto;object-fit:contain;background:white;padding:7px;border-radius:8px}.footer-legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:20px;font-size:12px}
+    .mobile-cta{display:none}
+    @media(max-width:1100px) and (min-width:761px){header{padding:0 18px}.brand{width:120px}nav{gap:10px;font-size:11px}.nav-cta{padding:10px 14px}}
+    @media(max-width:760px){
+      .topline{font-size:11px}.topline .optional{display:none}
+      header{height:62px;padding:0 18px}.brand{width:min(48vw,220px)}.brand img{height:52px;max-height:52px}nav a:not(.nav-cta){display:none}.nav-cta{padding:10px 11px;font-size:11px}.mobile-menu{display:block;position:relative}.mobile-menu summary{min-width:48px;min-height:48px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;color:var(--blue-deep);font-weight:800;cursor:pointer;list-style:none}.mobile-menu summary::-webkit-details-marker{display:none}.mobile-menu nav{position:absolute;right:0;top:58px;width:min(300px,88vw);display:grid;padding:12px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--shadow)}.mobile-menu nav a{display:flex!important;align-items:center;min-height:46px;padding:8px 12px;border-radius:8px;color:var(--blue-deep);font-weight:700}.mobile-menu nav a:hover{background:var(--blue-soft)}.hero:before{display:none}
+      .hero{grid-template-columns:1fr;padding:44px 20px 45px;background:linear-gradient(180deg,var(--cream),#fff 68%)}h1{font-size:42px;letter-spacing:-1.5px}.lead{font-size:17px}
+      .family-art{height:330px;margin:40px 5px 0}.arch{inset:0}.offer{margin:-18px 15px 0;grid-template-columns:1fr;text-align:center;gap:16px;padding:23px}.price{border:0;padding:0;justify-content:center}
+      .trust{grid-template-columns:1fr 1fr;padding:42px 18px}.trust-item{padding:13px}.trust-item b{font-size:21px}.trust-item:last-child{grid-column:1/-1}
+      .story{grid-template-columns:1fr;padding:48px 20px;gap:32px}.doctor{height:300px}.steps{grid-template-columns:1fr}
+      .team-section,.reviews-section{padding:48px 20px}.team-grid{grid-template-columns:1fr}.team-card{grid-template-columns:82px 1fr}.team-photo{width:82px;height:105px}.widget-slot{align-items:flex-start;flex-direction:column}
+      .proof-early{align-items:flex-start;flex-direction:column;gap:5px;padding:20px}.faq-preview,.office-preview{padding:48px 20px}.office-grid{grid-template-columns:1fr}.office-card{height:170px}.office-building{grid-column:auto}
+      .visit-preview{padding:48px 20px}.visit-days{grid-template-columns:1fr}
+      .life-stages-preview{padding:48px 20px}.life-cards{grid-template-columns:repeat(2,1fr)}
+      .mission-preview{padding:48px 20px}.mission-preview p{font-size:27px}.choose-preview{padding:48px 20px}.choose-grid{grid-template-columns:1fr 1fr}
+      .technique-teaser{padding:48px 20px}.technique-teaser>div{align-items:flex-start;flex-direction:column}
+      .final-preview{align-items:stretch;flex-direction:column;padding:48px 20px}
+      .site-footer{grid-template-columns:1fr;padding:44px 20px 34px}.footer-legal{grid-column:auto}
+      .mobile-cta{display:block;position:fixed;z-index:50;bottom:0;left:0;right:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);box-shadow:0 -5px 20px rgba(11,47,114,.13)}
+      .mobile-cta .btn{display:flex;width:100%;font-size:16px}body{padding-bottom:76px}
+    }
+  
+    /* Premium refinement — July 2026 */
+    :root{--cream:#fff;--mist:#f5f8fc;--line:#e3e8f0;--shadow:0 8px 24px rgba(15,36,64,.06)}body{background:#fff}.hero{background:#f5f8fc;padding-top:clamp(72px,9vw,112px);padding-bottom:clamp(72px,9vw,112px)}.hero::before{display:none}.hero-inner{gap:clamp(48px,7vw,96px)}.hero p{max-width:55ch}.family-art{min-height:400px;background:#eef3fa;border:1px solid #dce4ef;border-radius:24px;box-shadow:none;display:grid;place-items:center}.hero-photo-note{max-width:220px;color:#6d7788;font-weight:700;line-height:1.5;text-align:center}.offer,.card,.review-card,.team-card,.faq-item,details{box-shadow:none;border-color:#e3e8f0}.offer{background:#fff}.section,.story,.life-stages,.choose,.technique-teaser,.visit,.team-section,.reviews,.faq-preview,.office{padding-top:clamp(76px,8vw,104px);padding-bottom:clamp(76px,8vw,104px)}.mission-preview,.story,.team-section,.faq-preview{background:#f7f9fc}.mission-preview::before,.story::before,.team-section::before,.faq-preview::before{display:none}.eyebrow::before{background:var(--blue)}.card:hover,.team-card:hover,.review-card:hover{transform:none;box-shadow:none}.final-cta{background:#eef4ff;color:var(--deep)}.final-cta h2{color:var(--deep)}.final-cta p{color:var(--muted)}@media(max-width:760px){.hero{padding-top:58px;padding-bottom:64px}.family-art{min-height:280px;margin:0}.section,.story,.life-stages,.choose,.technique-teaser,.visit,.team-section,.reviews,.faq-preview,.office{padding-top:60px;padding-bottom:60px}}
+    h1,h2,h3{font-family:"Plus Jakarta Sans",sans-serif;font-weight:700}
+    h1{line-height:1.05;letter-spacing:-2.2px}
+    h2{line-height:1.14;letter-spacing:-1.35px}
+    h3{line-height:1.24;letter-spacing:-.45px}
+    .offer{grid-template-columns:minmax(0,1fr) auto auto}
+    .offer-copy{min-width:0}
+    @media(max-width:1050px) and (min-width:761px){
+      .offer{grid-template-columns:minmax(0,1fr) auto;row-gap:20px;margin-left:24px;margin-right:24px}
+      .offer .btn{grid-column:1/-1;justify-self:start}
+    }
+    @media(max-width:760px){
+      .offer{
+        display:flex;
+        width:auto;
+        max-width:none;
+        min-height:0;
+        height:auto;
+        margin:-18px 14px 0;
+        padding:28px 22px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        text-align:left;
+      }
+      .offer-copy{width:100%;min-width:0}
+      .offer-tag{margin:0 0 10px}
+      .offer-copy strong{display:block;max-width:none;font-size:clamp(20px,6vw,24px);line-height:1.3}
+      .price{
+        display:flex;
+        width:100%;
+        margin:24px 0 0;
+        padding:0;
+        align-items:baseline;
+        justify-content:flex-start;
+        gap:12px;
+        border:0;
+      }
+      .price b{flex:0 0 auto;font-size:clamp(50px,16vw,58px)}
+      .price span{min-width:0;font-size:14px;line-height:1.35}
+      .price del{margin-bottom:2px}
+      .offer .btn{
+        width:100%;
+        min-width:0;
+        margin-top:24px;
+        padding-right:16px;
+        padding-left:16px;
+        white-space:normal;
+        text-align:center;
+      }
+    }
+    @media(min-width:1600px){
+      .doctor{width:100%;max-width:640px;justify-self:center}
+      .doctor>img{object-position:center 12%}
+      .doctor>img.doctor-photo-team-wide{object-position:center 44%}
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"><span>New patient special:</span> $30 first visit for your entire family <span class="optional">when you come together</span></div>
+  <header>
+    <a class="brand" href="index.html"><img src="about-you-logo-with-spine.png" width="1965" height="1077" alt="About You Chiropractic — Align your body. Align your life."></a>
+    <details class="mobile-menu"><summary aria-label="Open main menu">Menu</summary><nav aria-label="Mobile navigation"><a href="index.html">Home</a><a href="about.html">Meet the Team</a><a href="pediatric-chiropractic.html">Pediatric</a><a href="prenatal-chiropractic.html">Prenatal</a><a href="chiropractic-techniques.html">Techniques</a><a href="new-patients.html">New Patients</a><a href="contact.html">Contact</a></nav></details>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="about.html">Meet the Team</a><a href="pediatric-chiropractic.html">Pediatric</a><a href="prenatal-chiropractic.html">Prenatal</a><a href="chiropractic-techniques.html">Techniques</a><a href="new-patients.html">New Patients</a><a href="contact.html">Contact</a>
+      <a class="nav-cta" href="https://calendly.com/aboutyouchiro/first-visit">Schedule Now →</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Serving Matawan Families Since 1984</div>
+        <h1>Helping Matawan families <em>function at their best</em> since 1984.</h1>
+        <p class="lead">Personalized chiropractic care for every generation—from newborns to active adults.</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://calendly.com/aboutyouchiro/first-visit">Claim Your $30 First Visit →</a>
+          <span class="phone">Questions? Give us a call—we’d love to help.</span>
+        </div>
+        <div class="reassure"><span>Family focused</span><span>Personal recommendations</span><span>Convenient scheduling</span></div>
+      </div>
+      <div class="family-art"><img src="assets/images/about-you-chiropractic-team-matawan.webp" width="1800" height="1200" fetchpriority="high" alt="Dr. Peter with Gabriella and Chloe outside About You Chiropractic in Matawan"></div>
+      </div>
+    </section>
+    <section class="reviews-section">
+      <div class="eyebrow">Real Google Reviews</div>
+      <h2>One of Matawan’s Most Trusted Chiropractic Offices</h2>
+      <p class="section-copy">See why local families, athletes, parents, and neighbors trust our office.</p>
+      <div class="widget-slot"><div><strong>Live Google Reviews</strong><small>Widget connection will appear here</small></div><span>★★★★★</span></div>
+    </section>
+    <section class="offer" id="care">
+      <div class="offer-copy"><div class="offer-tag">New Patient Special</div><strong>Comprehensive consultation & examination. Bring the entire family.</strong></div>
+      <div class="price"><b>$30</b><span><del>Usually $78</del>First Visit</span></div>
+      <a class="btn" href="https://calendly.com/aboutyouchiro/first-visit">Claim Your $30 Visit →</a>
+    </section>
+    <section class="trust" id="why">
+      <div class="trust-item"><b>★ 435+</b><span>Five-star Google reviews</span></div>
+      <div class="trust-item"><b>Since 1984</b><span>Serving Matawan families</span></div>
+      <div class="trust-item"><b>Family</b><span>Pediatric · prenatal chiropractic</span></div>
+      <div class="trust-item"><b>Under 3 min.</b><span>Typical wait time</span></div>
+      <div class="trust-item"><b>Clock Tower</b><span>Upstairs in Matawan’s iconic plaza</span></div>
+    </section>
+    <section class="mission-preview"><p>Every generation deserves the opportunity to grow, move, and function at its best.</p></section>
+    <section class="story" id="doctor">
+      <div class="doctor">
+        <img class="doctor-photo-team-wide" src="assets/images/about-you-chiropractic-team-office-entrance.webp" width="1800" height="1200" loading="lazy" alt="Dr. Peter Jeremich with Gabriella and Chloe outside About You Chiropractic">
+        <div class="doctor-label">Dr. Peter Jeremich</div>
+      </div>
+      <div>
+        <div class="eyebrow">Meet Dr. Peter</div>
+        <h2>Hi, I’m Dr. Peter.</h2>
+        <p>I’m a New Jersey native who has been passionate about chiropractic for more than 10 years. I attended Christian Brothers Academy in Lincroft, earned my bachelor’s degree from Rutgers University in New Brunswick, and received my Doctor of Chiropractic degree from Sherman College of Chiropractic in South Carolina. I spent five years caring for this community before purchasing the practice in April 2026.</p>
+        <p>It’s an honor to carry forward a practice Matawan families have trusted since 1984.</p>
+        <p><strong>My goal is simple:</strong> help every person who walks through our doors function at their best while feeling comfortable, informed, and genuinely supported.</p>
+        <p>I love helping people participate more fully in the lives they care about.</p>
+        <a class="btn" href="https://calendly.com/aboutyouchiro/first-visit">Schedule a Visit with Dr. Peter →</a>
+        <div class="steps">
+          <div class="step"><span class="num">1</span><b>Tell your story</b>A thoughtful conversation about how you feel and what matters to you.</div>
+          <div class="step"><span class="num">2</span><b>Understand your spine</b>A comprehensive exam to see what’s happening and what may help.</div>
+          <div class="step"><span class="num">3</span><b>Get your personal plan</b>Clear recommendations designed to support lasting spinal health.</div>
+          <div class="step"><span class="num">4</span><b>Posture evaluation</b>See important patterns clearly.</div>
+          <div class="step"><span class="num">5</span><b>Report of findings</b>Learn exactly what we found.</div>
+          <div class="step"><span class="num">6</span><b>Care recommendations</b>Review the plan built around you.</div>
+          <div class="step"><span class="num">7</span><b>Ongoing progress</b>Support lasting spinal health.</div>
+        </div>
+      </div>
+    </section>
+    <section class="life-stages-preview">
+      <div class="eyebrow">Personalized for every body</div>
+      <h2>Gentle chiropractic for every stage of life.</h2>
+      <p class="life-stage-copy">Every adjustment is tailored to the person. Dr. Peter’s education at Sherman College emphasized family chiropractic and gentle techniques for every age.</p>
+      <div class="life-cards"><div class="life-card"><img src="assets/icons/life-infants.svg" width="34" height="34" alt="" aria-hidden="true">Infants</div><div class="life-card"><img src="assets/icons/life-children.svg" width="34" height="34" alt="" aria-hidden="true">Children</div><div class="life-card"><img src="assets/icons/life-pregnancy.svg" width="34" height="34" alt="" aria-hidden="true">Pregnancy</div><div class="life-card"><img src="assets/icons/life-athletes.svg" width="34" height="34" alt="" aria-hidden="true">Athletes</div><div class="life-card"><img src="assets/icons/life-adults.svg" width="34" height="34" alt="" aria-hidden="true">Adults</div><div class="life-card"><img src="assets/icons/life-healthy-aging.svg" width="34" height="34" alt="" aria-hidden="true">Healthy Aging</div></div>
+    </section>
+    <section class="choose-preview" id="why">
+      <div class="eyebrow">The difference you’ll feel</div><h2>Why Families Choose About You Chiropractic</h2>
+      <div class="choose-grid"><div class="choose-card"><span>✓</span>Typical Wait Under 3 Minutes<small>We respect your time, so visits fit more easily into your day.</small></div><div class="choose-card"><span>✓</span>A Team That Knows You by Name<small>Feel welcomed, remembered, and supported from the moment you arrive.</small></div><div class="choose-card"><span>✓</span>435+ Five-Star Google Reviews<small>See why hundreds of local people trust this office with their health.</small></div><div class="choose-card"><span>✓</span>Serving Matawan Since 1984<small>Choose an established local practice trusted across generations.</small></div><div class="choose-card"><span>✓</span>Digital Posture Evaluation<small>Clear visuals help you understand what we see and why it matters.</small></div><div class="choose-card"><span>✓</span>Convenient Online Scheduling<small>Choose your first-visit time in a few simple taps.</small></div><div class="choose-card"><span>✓</span>Personalized Recommendations<small>Your plan reflects your exam, goals, lifestyle, and comfort.</small></div><div class="choose-card"><span>✓</span>A Family-Friendly Office<small>Picture a calm, comfortable space where every age feels at home.</small></div></div>
+    </section>
+    <section class="technique-teaser"><div><div><div class="eyebrow">Personalized Chiropractic Care</div><h2>No one-size-fits-all adjustments.</h2><p>Dr. Peter selects from several techniques based on your findings, goals, and comfort.</p></div><a href="chiropractic-techniques.html">Explore Our Techniques →</a></div></section>
+    <section class="visit-preview">
+      <div class="eyebrow">Know exactly what happens next</div><h2>Two visits. No surprises.</h2>
+      <div class="visit-days">
+        <div class="visit-day"><strong>First Visit</strong><ul><li>Consultation</li><li>Detailed health history</li><li>Comprehensive examination</li><li>Digital posture evaluation</li><li>X-rays if clinically necessary</li><li>Schedule your Report of Findings</li></ul></div>
+        <div class="visit-day"><strong>Second Visit</strong><ul><li>Review findings</li><li>Explain what we found</li><li>Personalized recommendations</li><li>First adjustment, when appropriate</li><li>Questions answered</li><li>Ongoing progress plan</li></ul></div>
+      </div>
+    </section>
+    <section class="team-section" id="team">
+      <div class="eyebrow">A friendly, organized office experience</div>
+      <h2>Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-card"><div class="team-photo"><img src="assets/images/gabriella-chiropractic-assistant-profile.webp" width="720" height="900" loading="lazy" alt="Gabriella, chiropractic assistant at About You Chiropractic"></div><div><b>Gabriella, C.A.</b><p>For more than five years, Gabriella has helped keep the office welcoming and organized. She greets new practice members, answers questions, and coordinates schedules.</p></div></div>
+        <div class="team-card"><div class="team-photo"><img src="assets/images/chloe-chiropractic-assistant-profile.webp" width="720" height="900" loading="lazy" alt="Chloe, chiropractic assistant at About You Chiropractic"></div><div><b>Chloe, C.A.</b><p>Chloe helps every practice member feel comfortable and valued from the moment they arrive. Her warmth and attention to detail shape our family-focused experience.</p></div></div>
+      </div>
+    </section>
+    <section class="faq-preview" id="faq">
+      <div class="eyebrow">Questions are welcome</div><h2>Feel comfortable before you arrive.</h2>
+      <details><summary>I’ve never been to a chiropractor. What should I expect?</summary><p>We listen first, complete a thorough evaluation, explain each step, and prepare recommendations for you.</p></details>
+      <details><summary>Do adjustments hurt?</summary><p>Most patients find adjustments comfortable. Technique and force are adapted to your body.</p></details>
+      <details><summary>Can babies, children, and pregnant women be adjusted?</summary><p>Yes. Techniques are adapted by age, and specialized tables support pregnancy comfort.</p></details>
+      <details><summary>Do I need to have pain to benefit from chiropractic?</summary><p>No. Many people choose proactive care before pain becomes a crisis.</p></details>
+      <details><summary>Will insurance help cover care?</summary><p>We verify benefits and explain every option. Self-pay plans may cost less than a typical copay.</p></details>
+      <details><summary>How long does my first visit take?</summary><p>Usually 30 minutes or less, with time to listen, evaluate, and answer questions.</p></details>
+    </section>
+    <section class="office-preview">
+      <div class="eyebrow">A welcoming office in Matawan</div><h2>Picture yourself feeling at home here.</h2>
+      <div class="office-grid"><div class="office-card office-building"><img src="clock-tower-building-wide.webp" width="1580" height="996" loading="lazy" alt="Illustration of the Clock Tower shopping plaza at 245 Main Street in Matawan"><b>The Clock Tower · 245 Main Street</b></div><div class="office-card"><img src="assets/images/about-you-chiropractic-grand-opening-sign.webp" width="1800" height="1200" loading="lazy" alt="About You Chiropractic grand opening display in the Matawan office"><b>Celebrating our community</b></div><div class="office-card"><img src="assets/images/matawan-chiropractor-ribbon-cutting.webp" width="1800" height="1200" loading="lazy" alt="Dr. Peter and the Matawan community at the About You Chiropractic ribbon cutting"><b>Rooted in Matawan</b></div><div class="office-card"><img src="assets/images/about-you-chiropractic-team-grand-opening.webp" width="1800" height="1200" loading="lazy" alt="Dr. Peter with Gabriella and Chloe at the About You Chiropractic grand opening"><b>Your friendly office team</b></div></div>
+    </section>
+    <section class="final-preview"><div><div class="eyebrow" style="color:#dce6ff">A good day to begin</div><h2>Start supporting your health today.</h2><p>Begin with a comprehensive $30 consultation and examination.</p></div><a class="btn" href="https://calendly.com/aboutyouchiro/first-visit">Claim Your $30 First Visit →</a></section>
+  </main>
+  <footer class="site-footer">
+    <div><img src="about-you-logo-with-spine.png" width="1965" height="1077" loading="lazy" alt="About You Chiropractic"><strong>About You Chiropractic</strong><span>Serving Matawan families since 1984.</span></div>
+    <div><strong>Explore</strong><a href="index.html">Home</a><a href="about.html">Meet the Team</a><a href="new-patients.html">New Patients</a></div>
+    <div><strong>Visit</strong><span>245 Main Street, Suite 2M<br>Matawan, NJ 07747</span><a href="tel:+17325830600">732-583-0600</a><a href="contact.html">Hours & directions</a></div>
+    <div><strong>Care</strong><a href="pediatric-chiropractic.html">Pediatric</a><a href="prenatal-chiropractic.html">Prenatal</a><a href="chiropractic-techniques.html">Techniques</a><a href="https://calendly.com/aboutyouchiro/first-visit">Schedule Now</a></div>
+    <div class="footer-legal">© 2026 About You Chiropractic · <a href="#">Privacy Policy</a></div>
+  </footer>
+  <div class="mobile-cta"><a class="btn" href="https://calendly.com/aboutyouchiro/first-visit">Schedule Your $30 First Visit →</a></div>
+  <script src="site.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
