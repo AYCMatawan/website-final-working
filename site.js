@@ -1,5 +1,39 @@
 document.querySelectorAll("[data-year]").forEach((el)=>el.textContent=new Date().getFullYear());
 
+const schedule = window.AYC_SCHEDULE;
+if (schedule) {
+  document.querySelectorAll("[data-regular-hours]").forEach((container) => {
+    container.innerHTML = schedule.regularHours.map(({ day, hours }) => `
+      <div class="hours-row">
+        <dt>${day}</dt>
+        <dd>${hours.map((time) => `<span>${time}</span>`).join("")}</dd>
+      </div>
+    `).join("");
+  });
+
+  document.querySelectorAll("[data-month-changes]").forEach((container) => {
+    const currentMonth = new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      year: "numeric",
+      timeZone: schedule.timeZone
+    }).format(new Date());
+    const heading = container.closest(".schedule-changes")?.querySelector("[data-current-month]");
+    if (heading) heading.textContent = currentMonth;
+
+    if (!schedule.changes.length) {
+      container.innerHTML = '<p class="no-schedule-changes">No schedule changes this month. Regular adjusting hours apply.</p>';
+      return;
+    }
+
+    container.innerHTML = schedule.changes.map(({ date, details }) => `
+      <article class="schedule-change-card">
+        <h3>${date}</h3>
+        ${details.map((line) => `<p>${line}</p>`).join("")}
+      </article>
+    `).join("");
+  });
+}
+
 const localBusiness = {
   "@context": "https://schema.org",
   "@type": ["Chiropractor", "MedicalBusiness"],
@@ -24,14 +58,14 @@ const localBusiness = {
     "https://www.facebook.com/aboutyouchiro/"
   ],
   openingHoursSpecification: [
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "09:45", closes: "11:45" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "14:45", closes: "18:45" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "14:45", closes: "18:45" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "09:45", closes: "11:45" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "14:45", closes: "18:45" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "14:45", closes: "18:45" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "07:00", closes: "09:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:15", closes: "10:45" }
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "09:00", closes: "11:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "15:00", closes: "19:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "15:00", closes: "19:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "09:00", closes: "11:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "15:00", closes: "19:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "15:00", closes: "19:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "06:30", closes: "08:30" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "10:30" }
   ]
 };
 const businessSchema = document.createElement("script");
